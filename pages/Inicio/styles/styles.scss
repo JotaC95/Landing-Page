@@ -1,0 +1,93 @@
+body{margin: 0; padding: 0;}
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid;
+    border-width: 1px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    
+    img{
+        margin-left: 20px;
+        height: 60px;
+        max-width: auto;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    ul{
+        display: flex;
+        margin-right: 30px;
+        li{
+            margin-right: 20px;
+            list-style: none;
+            font-size: 1rem;
+            &:hover{transform: scale(1.1);cursor: pointer;color: darkgrey;}
+
+        }
+    }
+}
+
+main{
+    .home-background{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: nowrap;
+        margin: 30px;
+        gap:  30px;
+        align-items: center;
+        justify-items: center;
+        img{
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: auto;
+        }
+        .homeMessage{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+    .benefits {
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    
+        .benefits-items {
+            display: flex;
+            transition: transform 0.5s ease;
+            will-change: transform;
+    
+            .item {
+                flex: 0 0 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+    
+            .arrow {
+                position: absolute;
+                top: 30%;
+                cursor: pointer;
+                font-size: 5em; 
+                user-select: none;
+    
+                &.arrowleft {
+                    left: 20px;
+                }
+    
+                &.arrowright {
+                    right: 20px;
+                }
+            }
+        }
+    }
+    
+}
