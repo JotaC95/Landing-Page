@@ -1,19 +1,37 @@
 body {
   margin: 0;
   padding: 0;
+  font: 1em sans-serif;
+  max-width: 97vw;
+  overflow-x: hidden;
+  margin: auto;
 }
 
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  header img {
+    margin: auto auto;
+  }
+  main .home-background {
+    display: flex;
+    flex-direction: column;
+  }
+  main .home-background .home-message {
+    margin-top: 20px;
+  }
+}
 header {
   display: flex;
-  justify-content: space-between;
-  border-bottom: solid;
-  border-width: 1px;
-  width: 100%;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 header img {
-  margin-left: 20px;
   height: 60px;
   max-width: auto;
   padding: 10px;
@@ -21,10 +39,9 @@ header img {
 }
 header ul {
   display: flex;
-  margin-right: 30px;
+  gap: 40px;
 }
 header ul li {
-  margin-right: 20px;
   list-style: none;
   font-size: 1.2rem;
 }
@@ -34,83 +51,69 @@ header ul li:hover {
   color: darkgrey;
 }
 
-main .home-background {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-wrap: nowrap;
-  margin: 30px;
-  gap: 30px;
-  align-items: center;
-  justify-items: center;
-  border-bottom: solid;
+main section {
+  margin: 10px 0;
+  border-bottom: 1px solid lightgrey;
   padding: 20px;
-  border-width: 1px;
+}
+main .home-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .home-background img {
   display: block;
   margin: auto;
-  width: 80%;
-  height: auto;
+  width: 400px;
+  height: 400px;
 }
-main .home-background .homeMessage {
+main .home-background .home-message {
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: 2em;
+  margin-left: 10px;
 }
 main .benefits {
-  overflow: hidden;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-items: center;
+  gap: 20px;
 }
-main .benefits .benefits-items {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin-left: 30px;
-  gap: 15%;
-}
-main .benefits .benefits-items .item {
-  max-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+main .benefits .item {
+  border: 1px solid lightgrey;
   padding: 10px;
-  border: solid;
+  text-align: center;
 }
-main .record-work .record {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
-  margin: 30px;
+main .record-work {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  width: 100%;
+  gap: 20px;
 }
-main .record-work .record img {
+main .record-work img {
   width: 200px;
   height: 200px;
 }
-main .design-web .design {
+main .design {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
 }
-main .design-web .design img {
+main .design img {
   width: 300px;
   height: 300px;
 }
-main .example .test-example {
+main .example {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin: 30px;
 }
-main .example .test-example img {
+main .example img {
   height: 200px;
   width: 200px;
 }
