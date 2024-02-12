@@ -24,12 +24,30 @@ body {
   main .home-background .home-message {
     margin-top: 20px;
   }
+  main .design {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .contact, footer .link-footer, footer section {
+    flex: none;
+    max-width: 100%;
+  }
+  footer .social-links a {
+    margin: 5px;
+  }
+  footer img {
+    scale: 2;
+  }
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #e0e1dd;
   margin-left: 10px;
   margin-right: 20px;
 }
@@ -53,7 +71,7 @@ header ul li:hover {
   color: darkgrey;
 }
 header ul li a {
-  color: black;
+  color: #e0e1dd;
   text-decoration: none;
 }
 
@@ -79,6 +97,7 @@ main .home-background .home-message {
   text-align: center;
   font-size: 2em;
   margin-left: 10px;
+  color: #e0e1dd;
 }
 main .benefits {
   width: 100%;
@@ -86,6 +105,10 @@ main .benefits {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   justify-items: center;
   gap: 20px;
+}
+main .benefits .text {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: navajowhite;
 }
 main .benefits .item1, main .benefits .item2, main .benefits .item3, main .benefits .item4, main .benefits .item5 {
   border: 1px solid lightgrey;
@@ -121,28 +144,13 @@ main .record-work {
   width: 100%;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 300px;
 }
 main .record-work .work {
-  width: fit-content;
   display: flex;
-  gap: 1rem;
-  animation: loop 10s linear infinite;
-}
-main .record-work .work .item-work {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  color: #e2e8f0;
-  background-color: #334155;
-  padding: 0.7rem 1rem;
-  border-radius: 0.4rem;
-  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3019607843), 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
-}
-main .record-work .work .fade {
-  position: absolute;
-  background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
-  inset: 0;
-  pointer-events: none;
+  gap: 40px;
+  animation: loop 20s linear infinite;
 }
 @keyframes loop {
   0% {
@@ -152,10 +160,20 @@ main .record-work .work .fade {
     transform: translateX(-50%);
   }
 }
+main .record-work .fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7) 100%);
+  inset: 0;
+  pointer-events: none;
+}
 main .record-work img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  width: 350px;
+  height: 300px;
+  object-fit: contained;
 }
 main .design {
   display: flex;
@@ -195,68 +213,37 @@ main .example img {
 }
 
 footer {
-  display: grid;
-  justify-items: center;
-  height: 100%;
-  margin-top: 40px;
-  grid-template-columns: repeat(4, 1fr);
-}
-footer .contact {
   display: flex;
-  flex-direction: column;
-}
-footer .contact .mail {
-  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  color: aliceblue;
+  gap: 20px;
 }
-footer .contact .mail i {
-  margin-right: 10px;
+footer img {
+  max-width: 10%;
+  height: auto;
 }
 footer .link-footer {
   display: grid;
-  grid-template-columns: 1fr;
   justify-items: center;
-  justify-content: center;
 }
-footer .link-footer ul {
-  display: grid;
-  list-style: none;
-  gap: 10px;
-}
-footer .link-footer ul a {
-  color: black;
+footer li, footer a {
   text-decoration: none;
-  font-size: 0.9rem;
+  list-style: none;
+  color: aliceblue;
 }
-footer .link-footer ul a:hover {
-  scale: 1.2;
-  cursor: pointer;
-  color: gainsboro;
+footer .link-footer, footer .contact, footer .section {
+  flex: 1;
 }
-footer img {
-  width: 180px;
-  height: 150px;
-  align-items: center;
+footer .link-footer i, footer .link-footer .mail h3, footer .link-footer .link h3, footer .link-footer .social h3, footer .contact i, footer .contact .mail h3, footer .contact .link h3, footer .contact .social h3, footer .section i, footer .section .mail h3, footer .section .link h3, footer .section .social h3 {
+  margin: 5px 0;
 }
-footer .social-links {
-  display: flex;
-  flex-direction: column;
-}
-footer .social-links a {
-  margin: 10px;
-}
-footer .social-links a:hover {
-  scale: 1.1;
-  cursor: pointer;
-}
-footer .social-links .github {
-  color: black;
-}
-footer .social-links .linkedin {
-  color: cornflowerblue;
-}
-footer .social-links .web {
-  color: coral;
+footer social-links a {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

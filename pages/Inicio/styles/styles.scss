@@ -13,13 +13,29 @@ body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: h
             flex-direction: column;
             .home-message{margin-top: 20px;}
         }
+        .design{
+            display: flex; flex-direction: column;
+        }
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .contact, .link-footer, section {
+            flex: none;
+            max-width: 100%;
+        }
+        .social-links a {
+            margin:5px;
+        }
+        img{scale: 2;}
     }
 }
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #e0e1dd;
     margin-left: 10px;
     margin-right: 20px;
     img{height: 60px; max-width: auto; padding: 10px; border-radius: 50%;}
@@ -29,13 +45,11 @@ header{
             list-style: none;
             font-size: 1.2rem;
             &:hover{transform: scale(1.1);cursor: pointer;color: darkgrey;}
-            a{color: black;text-decoration: none;}
+            a{color: #e0e1dd;text-decoration: none;}
         }
     }
 }
     
-
-
 
 main{
     section{
@@ -62,6 +76,7 @@ main{
             text-align: center;
             font-size: 2em;
             margin-left: 10px;
+            color: #e0e1dd;
         }
     }
     .benefits {
@@ -70,6 +85,7 @@ main{
         grid-template-columns: (repeat(auto-fit, minmax(180px, 1fr)));
         justify-items: center;
         gap: 20px;
+        .text {background-color:rgba(0,0,0,0.4); color:navajowhite ; }
         
         .item1, .item2, .item3, .item4, .item5 {border: 1px solid lightgrey; padding: 10px; text-align: center;}
         .item1{background-image: url(../assets/img/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg); background-position: center; background-size: cover;}
@@ -83,52 +99,46 @@ main{
             width: 100%;
             position: relative;
             overflow: hidden;
+            width:100%;
+            height: 300px;
     
             .work {
-                width: fit-content;
+                
                 display: flex;
-                gap: 1rem;
-                animation: loop 10s linear infinite;
+                gap: 40px;
+                animation: loop 20s linear infinite;
     
-                .item-work {
-                    display: flex;
-                    align-items: center;
-                    gap: 2rem; 
-                    color: #e2e8f0;
-                    background-color: #334155;
-                    padding: 0.7rem 1rem;
-                    border-radius: 0.4rem;
-                    box-shadow:
-                        0 0.1rem 0.2rem #00000033,
-                        0 0.1rem 0.5rem #0000004d,
-                        0 0.2rem 1.5rem #00000066; 
+                @keyframes loop {
+                    0% {
+                        transform: translateX(0);
+                    }
+    
+    
+                    100% {
+                        transform: translateX(-50%);
+                    }
                 }
     
-                .fade {
-                    position: absolute;
-                    background: linear-gradient(90deg,
-                    #1e293b, transparent 30%,
-                    transparent 70%, #1e293b);
-                    inset: 0;
-                    pointer-events: none;
-                }
+            }
+            .fade {
+                position: absolute;
+                top: 0;left: 0;right: 0;bottom: 0;
+                background: linear-gradient(90deg,
+                            rgb(0,0,0,0.7) 0%,
+                            rgb(0,0,0,0)35%,
+                            rgba(0,0,0,0)65%,
+                            rgb(0,0,0,0.7)100%);
+                inset: 0;
+                pointer-events: none;
+                                    
             }
     
-            @keyframes loop {
-                0% {
-                    transform: translateX(0);
-                }
-    
-    
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
+            
         
         img{
-            width: 200px;
-            height:  200px;
-            object-fit: cover;
+            width: 350px;
+            height:  300px;
+            object-fit:contained;
         }       
     }
     
@@ -175,37 +185,36 @@ main{
 }
 
 footer{
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     height: 100%;
-    margin-top: 40px;
+    width: 80%;
+    margin: 40px;
     grid-template-columns: repeat(4, 1fr);
+    color:aliceblue;
+    gap: 20px;
+    img{max-width: 10%; height: auto;}
 
-    .contact{
-        display: flex;
-        flex-direction: column;
-        .mail{display: flex; align-items: center;i{margin-right: 10px;}}
+    .link-footer{display: grid;justify-items: center;}
+
+    li, a{
+        text-decoration: none;
+        list-style: none;
+        color: aliceblue;
     }
-    .link-footer{
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        justify-content: center;
+    .link-footer, .contact, .section{
+        flex: 1;
         
-        ul{
-            display: grid;
-            list-style: none;
-            gap: 10px;
-            a{color: black; text-decoration: none; font-size: 0.9rem;  &:hover{scale: 1.2;cursor: pointer; color: gainsboro; }}
+        
+        i, .mail h3, .link h3, .social h3{
+            margin: 5px 0;
+            
         }
-    }
-
-    img{width: 180px; height: 150px; align-items: center;}
-    .social-links{
-        display: flex;
-        flex-direction: column;
         
-        a{margin: 10px;&:hover{scale: 1.1; cursor: pointer;}}
-        .github{color: black;} .linkedin{color:cornflowerblue;} .web{color: coral;}
+    }
+    
+    social-links a{
+        margin-right: 10px;
     }
 }
