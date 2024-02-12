@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="../Inicio/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 </head>
 <body>
-    <header>
+    <header class="nav">
         <img src="../Inicio/assets/img/LogoLandingP.png" alt="Logo">
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Contacto</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="home-background">
+        <section class="home-background" id="home">
             <div><img src="../Inicio/assets/img/FondoInicio.webp" alt=""></div>
             <div class="home-message">
                 <strong>Web developer</strong>
@@ -26,44 +29,70 @@
             </div>
             
         </section>
-        <section class="benefits">
+        <section class="benefits" id="benefits">
                     
-                <div class="item"><h1>Responsive Design</h1><p>Adapts its interface to look good on any device, essential for mobile users.</p></div>
-                <div class="item"><h1>Fast Loading</h1><p>Pages load quickly to retain users and enhance the online experience.</p></div>
-                <div class="item"><h1>Intuitive</h1><p> Simple and logical navigation, makes it easy for users to find what they're looking for quickly.</p></div>
-                <div class="item"><h1>Relevant Content</h1><p>Useful and up-to-date information that meets visitors' needs and questions.</p></div>
-                <div class="item"><h1>Security</h1><p>Strong data protection to ensure user confidentiality and trust.</p></div>
+                <div class="item1"><h1>Responsive Design</h1><p>Adapts its interface to look good on any device, essential for mobile users.</p></div>
+                <div class="item2"><h1>Fast Loading</h1><p>Pages load quickly to retain users and enhance the online experience.</p></div>
+                <div class="item3"><h1>Intuitive</h1><p> Simple and logical navigation, makes it easy for users to find what they're looking for quickly.</p></div>
+                <div class="item4"><h1>Relevant Content</h1><p>Useful and up-to-date information that meets visitors' needs and questions.</p></div>
+                <div class="item5"><h1>Security</h1><p>Strong data protection to ensure user confidentiality and trust.</p></div>
             
                         
         </section>
-        <section class="record-work">
-            
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works1"></div>
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works2"></div>
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works3"></div>
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works4"></div>
-        
-        
+        <section class="record-work" id="works">
+            <div class="work">
+                <div class="item-work"><img src="../Inicio/assets/img/LaserenaWeb.png" alt="works1"></div>
+                <div class="item-work"><img src="../Inicio/assets/img/LaserenaWeb.png" alt="works2"></div>
+                <div class="item-work"><img src="../Inicio/assets/img/LaserenaWeb.png" alt="works3"></div>
+                <div class="item-work"><img src="../Inicio/assets/img/LaserenaWeb.png" alt="works4"></div>
+                <div class="item-work"><img src="../Inicio/assets/img/LaserenaWeb.png" alt="works4"></div>
+                <div class="item-work"><img src="../Inicio/assets/img/LaserenaWeb.png" alt="works4"></div>
+                <div class="fade"></div>
+            </div>                    
                 
         </section>
-        <section class="design">   
+        <section class="design" id="design">   
         
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works1"></div>
+            <div class="item-work"><img src="../Inicio/assets/img/D-Zone_Diseno-Web.png" alt="works1"></div>
             <h1 class="description">description</h1>
 
         </section>
                                     
-        <section class="example">
+        <section class="example" id="example">
             
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works1"></div>
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works1"></div>
-            <div class="item-work"><img src="../Inicio/assets/img/FondoInicio.webp" alt="works1"></div>
+            <div class="item-work1"><img src="../Inicio/assets/img/daniel-korpai-pKRNxEguRgM-unsplash.jpg" alt="works1"></div>
+            <div class="item-work2"><img src="../Inicio/assets/img/Copia de daniel-korpai-pKRNxEguRgM-unsplash.jpg" alt="works2"></div>
+            <div class="item-work3"><img src="../Inicio/assets/img/Copia de daniel-korpai-pKRNxEguRgM-unsplash 2.jpg" alt="works3"></div>
             
         </section>
         
     </main>
     <footer>
-        just me
+        <img src="../Inicio/assets/img/LogoLandingP.png" alt="img">
+        <section class="contact" id="contact">
+            <h3>Contact</h3>
+            <i class="fa-solid fa-phone"> +593 939933960</i><br/>
+            <div class="mail"><i class="fa-solid fa-envelope"></i><h3>jota.crow@gmail.com</h3> </div>
+            
+        </section>
+        <section class="link-footer">
+            <div class="link"><h3>Link</h3></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#design">Description</a></li>
+            </ul>          
+        </section>
+        <section>
+            <div class="social"><h3>Network</h3></div>
+            <div class="social-links">
+                <a href="https://github.com/JotaC95" target="_blank" class="github"><i class="fab fa-github fa-2x"></i></a> 
+                <a href="https://www.linkedin.com/in/jaimejosecrow" target="_blank" class="linkedin"><i class="fab fa-linkedin fa-2x"></i></a> 
+                <a href="" target="_blank" class="web"><i class="fas fa-globe fa-2x"></i></a> 
+            </div>
+                        
+        </section>
     </footer>
     
 </body>
