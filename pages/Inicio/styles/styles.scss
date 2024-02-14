@@ -1,4 +1,4 @@
-body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: hidden;margin: auto; background-color:#1b263b;}
+body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: hidden;margin: auto; background-color:#ffffff;}
 
 @media (max-width: 700px){
     header{
@@ -18,6 +18,7 @@ body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: h
         }
     }
     footer{
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -30,6 +31,7 @@ body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: h
             margin:5px;
         }
         img{scale: 2;}
+        .social-links{display: grid;}
     }
 }
 header{
@@ -45,7 +47,7 @@ header{
             list-style: none;
             font-size: 1.2rem;
             &:hover{transform: scale(1.1);cursor: pointer;color: darkgrey;}
-            a{color: #e0e1dd;text-decoration: none;}
+            a{color: #000000;text-decoration: none;}
         }
     }
 }
@@ -54,7 +56,7 @@ header{
 main{
     section{
         margin: 10px 0;
-        border-bottom: 1px solid lightgrey;
+        border-bottom: 1px solid rgb(147, 146, 146);
         padding: 20px;
         
     }
@@ -76,7 +78,7 @@ main{
             text-align: center;
             font-size: 2em;
             margin-left: 10px;
-            color: #e0e1dd;
+            color: #000000;
         }
     }
     .benefits {
@@ -85,14 +87,15 @@ main{
         grid-template-columns: (repeat(auto-fit, minmax(180px, 1fr)));
         justify-items: center;
         gap: 20px;
-        .text {background-color:rgba(0,0,0,0.4); color:navajowhite ; }
+        background-color: rgb(244, 194, 75);
+        .text {color:rgb(33, 39, 40);}
         
-        .item1, .item2, .item3, .item4, .item5 {border: 1px solid lightgrey; padding: 10px; text-align: center;}
-        .item1{background-image: url(../assets/img/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg); background-position: center; background-size: cover;}
-        .item2{background-image: url(../assets/img/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg); background-position: center; background-size: cover;}
-        .item3{background-image: url(../assets/img/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg); background-position: center; background-size: cover;}
-        .item4{background-image: url(../assets/img/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg); background-position: center; background-size: cover;}
-        .item5{background-image: url(../assets/img/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg); background-position: center; background-size: cover;}
+        .item1, .item2, .item3, .item4, .item5 {border: 1px solid lightgrey; padding: 10px; text-align: center;border-radius: 10%;}
+        .item1{background-color: #ffffff;}
+        .item2{background-color: #ffffff;}
+        .item3{background-color: #ffffff;}
+        .item4{background-color: #ffffff;}
+        .item5{background-color: #ffffff;}
     }                   
 
         .record-work {
@@ -124,10 +127,10 @@ main{
                 position: absolute;
                 top: 0;left: 0;right: 0;bottom: 0;
                 background: linear-gradient(90deg,
-                            rgb(0,0,0,0.7) 0%,
+                            rgba(255, 255, 255, 0.7) 0%,
                             rgb(0,0,0,0)35%,
                             rgba(0,0,0,0)65%,
-                            rgb(0,0,0,0.7)100%);
+                            rgba(255, 255, 255, 0.7)100%);
                 inset: 0;
                 pointer-events: none;
                                     
@@ -148,9 +151,9 @@ main{
         align-items: center;
         gap: 80px;
         img {
-            width: 300px;
-            height: 300px;
-            object-fit: fill;
+            width: 500px;
+            height: auto;
+            object-fit:contain;
         }
     }
                 
@@ -183,38 +186,37 @@ main{
     }
     
 }
-
+.img-footer{width: 500px;height: auto;padding: 0px; margin: 0px; position: relative; left: 30%;bottom: -70px;}
 footer{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100%;
-    width: 80%;
-    margin: 40px;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    color:aliceblue;
-    gap: 20px;
-    img{max-width: 10%; height: auto;}
-
-    .link-footer{display: grid;justify-items: center;}
-
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    color:rgb(0, 0, 0);
+    justify-items: center;
+    align-items: start;
+    background-color: rgb(244, 194, 75);
+    padding-top: 70px;
+    
+    .link-footer{
+        display: grid; text-align: center;
+        ul{display: flex; justify-content: center; flex-direction: column; align-items: center; padding: 0px; margin: 0px;gap: 20px;font-size: 0.9rem;} 
+    }
+    
     li, a{
         text-decoration: none;
         list-style: none;
-        color: aliceblue;
-    }
-    .link-footer, .contact, .section{
-        flex: 1;
-        
-        
-        i, .mail h3, .link h3, .social h3{
-            margin: 5px 0;
-            
-        }
+        color: rgb(0, 0, 0);
         
     }
+    img{max-width: 30%; height: auto;object-fit:contain; margin-top: 30px;}
     
-    social-links a{
-        margin-right: 10px;
-    }
+    .contact{
+        font-size: 1rem;
+        .mail{font-size: 0.8em; display: flex; align-items: center; gap: 10px;}
+        i{font-size: 0.9rem;}
+    } 
+    
+    
 }
