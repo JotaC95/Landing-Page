@@ -1,4 +1,4 @@
-body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: hidden;margin: auto; background-color:#ffffff;}
+body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 100%; overflow-x: hidden;margin: auto; background-color:#ffffff; }
 
 @media (max-width: 700px){
     header{
@@ -17,11 +17,13 @@ body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: h
             display: flex; flex-direction: column;
         }
     }
+    .img-footer{scale: 0.8;}
     footer{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto;
         align-items: center;
-        gap: 20px;
+        gap: 5px;
 
         .contact, .link-footer, section {
             flex: none;
@@ -31,7 +33,7 @@ body{margin: 0; padding: 0; font: 1em sans-serif; max-width: 97vw; overflow-x: h
             margin:5px;
         }
         img{scale: 2;}
-        .social-links{display: grid;}
+        .social-items{grid-row: 3;grid-column: 2;}
     }
 }
 header{
@@ -65,7 +67,7 @@ main{
         display: flex;
         justify-content: center; 
         align-items: center;
-        
+        padding-bottom: 40px;
         img{
             display: block;
             margin: auto;
@@ -77,17 +79,19 @@ main{
             flex-direction: column;
             text-align: center;
             font-size: 2em;
-            margin-left: 10px;
+            margin-left: 40px;
             color: #000000;
         }
     }
     .benefits {
-        width: 100%;        
+    
         display: grid;
-        grid-template-columns: (repeat(auto-fit, minmax(180px, 1fr)));
+        grid-template-columns: (repeat(auto-fill, minmax(150px, 2fr)));
         justify-items: center;
         gap: 20px;
         background-color: rgb(244, 194, 75);
+        margin-bottom: 50px;
+        margin-top: 50px;
         .text {color:rgb(33, 39, 40);}
         
         .item1, .item2, .item3, .item4, .item5 {border: 1px solid lightgrey; padding: 10px; text-align: center;border-radius: 10%;}
@@ -97,16 +101,12 @@ main{
         .item4{background-color: #ffffff;}
         .item5{background-color: #ffffff;}
     }                   
-
+    .work-phrase{margin-inline: 50px;}
         .record-work {
-            width: 100%;
             position: relative;
             overflow: hidden;
-            width:100%;
-            height: 300px;
     
             .work {
-                
                 display: flex;
                 gap: 40px;
                 animation: loop 20s linear infinite;
@@ -127,10 +127,10 @@ main{
                 position: absolute;
                 top: 0;left: 0;right: 0;bottom: 0;
                 background: linear-gradient(90deg,
-                            rgba(255, 255, 255, 0.7) 0%,
-                            rgb(0,0,0,0)35%,
-                            rgba(0,0,0,0)65%,
-                            rgba(255, 255, 255, 0.7)100%);
+                            rgba(255, 255, 255, 1) 0%,
+                            rgb(0,0,0,0)20%,
+                            rgba(0,0,0,0)70%,
+                            rgba(255, 255, 255, 1)100%);
                 inset: 0;
                 pointer-events: none;
                                     
@@ -150,11 +150,13 @@ main{
         justify-content: center;
         align-items: center;
         gap: 80px;
+        
         img {
             width: 500px;
             height: auto;
             object-fit:contain;
         }
+        p{width: 300px;text-align: justify; font-size: 1.2rem;}
     }
                 
     .example{ 
@@ -186,7 +188,7 @@ main{
     }
     
 }
-.img-footer{width: 500px;height: auto;padding: 0px; margin: 0px; position: relative; left: 30%;bottom: -70px;}
+.img-footer{width: 500px;height: auto; left: 50%; transform: translateX(-50%); position: relative;bottom: -70px;}
 footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -210,7 +212,7 @@ footer{
         color: rgb(0, 0, 0);
         
     }
-    img{max-width: 30%; height: auto;object-fit:contain; margin-top: 30px;}
+    img{max-width: 30%; height: auto;object-fit:contain; margin-top: 30px; border-radius: 50%;}
     
     .contact{
         font-size: 1rem;
